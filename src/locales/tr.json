@@ -1,3 +1,9 @@
 {
-  "message": "hello i18n !!"
+  "message": "meraba canim !!",
+  "validation": {
+    "email": "mail gir deve oglu deve",
+    "required": "bu alan zorunludur!",
+    "minLength": "bu alan en az {min} karakter icermelidir.",
+    "maxLength": "bu alan en fazla 10 karakter icerebilir"
+  }
 }

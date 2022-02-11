@@ -1,0 +1,9 @@
+{
+  "message": "hello i18n !!",
+  "validation": {
+    "email": "of course set mail camel",
+    "required": "this area is required!",
+    "minLength": "heey this field is includes maximum {min} characters",
+    "maxLength": "heey this field is includes minimum 10 characters"
+  }
+}

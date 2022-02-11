@@ -2,7 +2,10 @@
   <div class="hello">
     <div class="form">
       <input type="text" v-model="v$.firstName.$model">
-      <div class="input-errors" v-for="error of v$.firstName.$errors" :key="error.$uid">
+      <div
+        class="input-errors"
+        v-for="error of v$.firstName.$errors"
+        :key="error.$uid">
         <div class="error-msg">{{ error.$message }}</div>
       </div>
     </div>
@@ -29,7 +32,7 @@ export default {
     })
     const rules = computed(() => {
       const localRules = {
-        firstName: { required, email, minLength}
+        firstName: { required, email, minLength: minLength(10)}
       }
       return localRules
     })
