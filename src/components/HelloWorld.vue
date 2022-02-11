@@ -1,5 +1,13 @@
 <template>
   <div class="hello">
+    <select v-model="$i18n.locale" @change="setLang($event)">
+      <option
+        v-for="(lang, i) in languages"
+        :key="`lang${i}`"
+        :value="lang">
+        {{ lang }}
+      </option>
+    </select>
     <div class="form">
       <div class="form-item">
         <label for="firstName">First Name</label>
@@ -37,8 +45,10 @@
 
 <script>
 import { reactive, computed } from 'vue'
+import { useStore } from 'vuex'
 import useVuelidate from '@vuelidate/core'
 import { required, email, minLength, maxLength } from '@/utils/i18n-validators'
+import { languages } from '@/i18n'
 
 export default {
   name: 'HelloWorld',
@@ -46,6 +56,7 @@ export default {
     msg: String
   },
   setup() {
+    const store = useStore()
     const state = reactive({
       firstName: '',
       lastName: '',
@@ -59,10 +70,16 @@ export default {
       }
       return localRules
     })
-    
     const v$ = useVuelidate(rules, state)
+    const setLang = event => {
+      store.dispatch('changeLocale', event.target.value)
+    }
 
-    return { v$ }
+    return {
+      v$,
+      languages,
+      setLang
+    }
   }
 }
 </script>
