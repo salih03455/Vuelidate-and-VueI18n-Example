@@ -10,7 +10,7 @@
     </select>
     <div class="form">
       <div class="form-item">
-        <label for="firstName">First Name</label>
+        <label for="firstName">{{ $t('firstName') }}</label>
         <input type="text" id="firstName" v-model="v$.firstName.$model">
         <div
           class="input-errors"
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="form-item">
-        <label for="lastName">Last Name</label>
+        <label for="lastName">{{ $t('lastName') }}</label>
         <input type="text" id="lastName" v-model="v$.lastName.$model">
         <div
           class="input-errors"
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="form-item">
-        <label for="email">Email</label>
+        <label for="email">{{ $t('email') }}</label>
         <input type="text" id="email" v-model="v$.email.$model">
         <div
           class="input-errors"
@@ -60,7 +60,7 @@ export default {
     const state = reactive({
       firstName: '',
       lastName: '',
-      email: ''
+      email: store.state.email
     })
     const rules = computed(() => {
       const localRules = {

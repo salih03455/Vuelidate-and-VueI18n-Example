@@ -3,7 +3,8 @@ import { selectedLocale } from '@/i18n'
 
 export default createStore({
   state: {
-    locale: selectedLocale
+    locale: selectedLocale,
+    email: 'salih03455@gmail.com'
   },
   mutations: {
     updateLocale(state, newLocale) {

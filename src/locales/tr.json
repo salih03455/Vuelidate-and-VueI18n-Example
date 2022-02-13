@@ -1,5 +1,8 @@
 {
   "message": "meraba canim !!",
+  "firstName": "İsim",
+  "lastName": "Soyisim",
+  "email": "Eposta",
   "validation": {
     "email": "mail gir deve oglu deve",
     "required": "bu alan zorunludur!",

@@ -1,5 +1,8 @@
 {
   "message": "hello i18n !!",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "email": "Email",
   "validation": {
     "email": "of course set mail camel",
     "required": "this area is required!",
