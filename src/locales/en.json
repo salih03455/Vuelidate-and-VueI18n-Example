@@ -3,6 +3,8 @@
   "firstName": "First Name",
   "lastName": "Last Name",
   "email": "Email",
+  "selectLang": "Select Language",
+  "title": "",
   "validation": {
     "email": "of course set mail camel",
     "required": "this area is required!",

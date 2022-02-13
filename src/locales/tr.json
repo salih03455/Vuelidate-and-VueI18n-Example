@@ -3,6 +3,8 @@
   "firstName": "İsim",
   "lastName": "Soyisim",
   "email": "Eposta",
+  "selectLang": "Dili Seç",
+  "title": "",
   "validation": {
     "email": "mail gir deve oglu deve",
     "required": "bu alan zorunludur!",

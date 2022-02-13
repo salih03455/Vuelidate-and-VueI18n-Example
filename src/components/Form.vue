@@ -1,14 +1,17 @@
 <template>
-  <div class="hello">
-    <select v-model="$i18n.locale" @change="setLang($event)">
-      <option
-        v-for="(lang, i) in languages"
-        :key="`lang${i}`"
-        :value="lang">
-        {{ lang }}
-      </option>
-    </select>
-    <div class="form">
+  <div class="form">
+    <div class="select-lang">
+      <div>{{ $t('selectLang') }}</div>
+      <select v-model="$i18n.locale" @change="setLang($event)">
+        <option
+          v-for="(lang, i) in languages"
+          :key="`lang${i}`"
+          :value="lang">
+          {{ lang }}
+        </option>
+      </select>
+    </div>
+    <div class="form-content">
       <div class="form-item">
         <label for="firstName">{{ $t('firstName') }}</label>
         <input type="text" id="firstName" v-model="v$.firstName.$model">
@@ -51,10 +54,7 @@ import { required, email, minLength, maxLength } from '@/utils/i18n-validators'
 import { languages } from '@/i18n'
 
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  },
+  name: 'Form',
   setup() {
     const store = useStore()
     const state = reactive({
@@ -84,23 +84,60 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.select-lang {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 5px solid #ddd;
+  margin-bottom: 30px;
+  box-shadow: 0px 15px 7px 0px #ccc;
+  padding: 10px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.select-lang div {
+  font-weight: bold;
+  padding-right: 15px;
+  font-size: 15px;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.select-lang select {
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 4px;
+  padding-left: 4px;
 }
 a {
   color: #42b983;
 }
 label {
   display: block;
+}
+.form {
+  width: 400px;
+  max-width: calc(100% - 20px);
+  margin: auto;
+}
+.form-item {
+  margin-bottom: 15px;
+}
+input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 5px;
+}
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+input:focus {
+  border-color: #42b983;
+}
+.error-msg {
+  color: #ff0000;
+  font-size: 13px;
 }
 </style>
