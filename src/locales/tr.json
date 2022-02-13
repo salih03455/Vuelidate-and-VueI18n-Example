@@ -4,7 +4,7 @@
   "lastName": "Soyisim",
   "email": "Eposta",
   "selectLang": "Dili Seç",
-  "title": "",
+  "title": "{vuelidate} ve {vuei18n} Uygulaması",
   "validation": {
     "email": "mail gir deve oglu deve",
     "required": "bu alan zorunludur!",

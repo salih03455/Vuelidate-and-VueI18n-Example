@@ -4,7 +4,7 @@
   "lastName": "Last Name",
   "email": "Email",
   "selectLang": "Select Language",
-  "title": "",
+  "title": "{vuelidate} and {vuei18n} Implementation",
   "validation": {
     "email": "of course set mail camel",
     "required": "this area is required!",

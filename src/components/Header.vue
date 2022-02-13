@@ -1,6 +1,13 @@
 <template>
   <header>
-    <h1><a href="https://vuelidate-next.netlify.app/" target="_blank">Vuelidate</a> and <a href="https://vue-i18n.intlify.dev/" target="_blank">Vue I18n</a> Implementation</h1>
+    <i18n-t keypath="title" tag="h1">
+      <template #vuelidate>
+        <a href="https://vuelidate-next.netlify.app/" target="_blank">Vuelidate</a>
+      </template>
+      <template #vuei18n>
+        <a href="https://vue-i18n.intlify.dev/" target="_blank">Vue I18n</a>
+      </template>
+    </i18n-t>
     <p></p>
   </header>
 </template>
