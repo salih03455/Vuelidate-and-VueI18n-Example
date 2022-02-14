@@ -8,7 +8,7 @@
         <a href="https://vue-i18n.intlify.dev/" target="_blank">Vue I18n</a>
       </template>
     </i18n-t>
-    <p></p>
+    <p>{{ $t('description') }} 🎉🎉🎉</p>
   </header>
 </template>
 <script>
@@ -20,7 +20,9 @@ export default {
 <style scoped>
   header {
     text-align: center;
-    margin-bottom: 50px;
+    max-width: 960px;
+    padding: 0 10px;
+    margin: 0 auto 50px;
   }
   header h1 a {
     color: #42b983;
@@ -28,5 +30,9 @@ export default {
   }
   header h1 a:hover {
     text-decoration: underline;
+  }
+  header p {
+    font-size: 18px;
+    color: #666;
   }
 </style>

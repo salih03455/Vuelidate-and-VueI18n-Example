@@ -1,14 +1,14 @@
 {
-  "message": "hello i18n !!",
   "firstName": "First Name",
   "lastName": "Last Name",
   "email": "Email",
   "selectLang": "Select Language",
   "title": "{vuelidate} and {vuei18n} Implementation",
+  "description": "A simple form was created with Vue 3. Validation processes were performed with Vuelidate. The language structure was created with Vue I18n. When the language is changed, the validation messages change accordingly.",
   "validation": {
-    "email": "of course set mail camel",
-    "required": "this area is required!",
-    "minLength": "heey this field is includes maximum {min} characters",
-    "maxLength": "heey this field is includes minimum 10 characters"
+    "email": "Not suitable for email format!",
+    "required": "This field is required!",
+    "minLength": "This field can be maximum {min} characters!",
+    "maxLength": "This field can be minimum 10 characters!"
   }
 }

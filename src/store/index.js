@@ -4,7 +4,11 @@ import { selectedLocale } from '@/i18n'
 export default createStore({
   state: {
     locale: selectedLocale,
-    email: 'salih03455@gmail.com'
+    user: {
+      name: '',
+      surname: '',
+      email: 'salih03455@gmail.com'
+    }
   },
   mutations: {
     updateLocale(state, newLocale) {
@@ -17,6 +21,9 @@ export default createStore({
       commit('updateLocale', newLocale)
     }
   },
-  modules: {
+  getters: {
+    getLocale(state) {
+      return state.user
+    }
   }
 })

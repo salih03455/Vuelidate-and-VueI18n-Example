@@ -1,14 +1,14 @@
 {
-  "message": "meraba canim !!",
   "firstName": "İsim",
   "lastName": "Soyisim",
   "email": "Eposta",
   "selectLang": "Dili Seç",
   "title": "{vuelidate} ve {vuei18n} Uygulaması",
+  "description": "Vue 3 ile basit bir form oluşturuldu. Vuelidate ile validation işlemleri yapıldı. Dil yapısı ise Vue I18n ile kurgulandı. Dil değiştirildiğinde validation mesajları da buna paralel olarak değişiyor.",
   "validation": {
-    "email": "mail gir deve oglu deve",
-    "required": "bu alan zorunludur!",
-    "minLength": "bu alan en az {min} karakter icermelidir.",
-    "maxLength": "bu alan en fazla 10 karakter icerebilir"
+    "email": "Email formatına uygun değil!",
+    "required": "Bu alan zorunludur!",
+    "minLength": "Bu alan en az {min} karakter icermelidir!",
+    "maxLength": "Bu alan en fazla 10 karakter icerebilir!"
   }
 }

@@ -60,7 +60,7 @@ export default {
     const state = reactive({
       firstName: '',
       lastName: '',
-      email: store.state.email
+      email: store.getters.getLocale.email
     })
     const rules = computed(() => {
       const localRules = {
